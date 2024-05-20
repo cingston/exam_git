@@ -68,7 +68,9 @@ void Commands()
 string ReadInput(string msg)
 {
     Console.Write(msg);
+#pragma warning disable CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
     return Console.ReadLine();
+#pragma warning restore CS8603 // Возможно, возврат ссылки, допускающей значение NULL.
 }
 
 //  Функция вывода массива в терминал
